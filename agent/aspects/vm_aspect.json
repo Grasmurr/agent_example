@@ -1,0 +1,19 @@
+{
+  "name": "Virtual Machine Aspect",
+  "description": "Инструменты и мониторы для работы с виртуальной машиной",
+  "tools": [
+    "terminal"
+  ],
+  "monitors": [
+    {
+      "name": "ssh_monitor",
+      "path": "components.monitoring.ssh_monitor",
+      "class": "SSHMonitor",
+      "dependencies": ["ssh_tool"]
+    }
+  ],
+  "programs": [
+    "tools/vm", 
+    "modifiers/no-loops"
+  ]
+}

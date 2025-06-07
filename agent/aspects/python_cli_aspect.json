@@ -1,0 +1,22 @@
+{
+  "name": "Python CLI Aspect",
+  "description": "Инструменты для выполнения Python кода через CLI на виртуальной машине",
+  "tools": [
+    "execute_python_cli", 
+    "install_python_package", 
+    "list_python_packages"
+  ],
+  "monitors": [
+    {
+      "name": "python_cli_monitor",
+      "path": "components.monitoring.python_cli_monitor", 
+      "class": "PythonCliMonitor",
+      "dependencies": ["python_cli_tool"]
+    }
+  ],
+  "programs": [
+    "tools/python_cli", 
+    "tools/vm", 
+    "modifiers/no-loops"
+  ]
+}

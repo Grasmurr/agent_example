@@ -1,0 +1,10 @@
+{
+  "modes": {
+    "1": "mode_basic",
+    "2": "mode_dev",
+    "3": "mode_analysis",
+    "4": "mode_pricing",
+    "5": "mode_contract"
+  },
+  "default_mode": "5"
+}

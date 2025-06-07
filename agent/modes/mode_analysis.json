@@ -1,0 +1,7 @@
+{
+  "id": 2,
+  "name": "Data Analysis Mode",
+  "description": "Режим для анализа данных с pandas и доступом к базе данных",
+  "aspects": ["pandas_aspect", "telegram_aspect", "task_aspect", "sketch_aspect", "utils_aspect"],
+  "default_program": "basic"
+}

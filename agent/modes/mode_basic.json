@@ -1,0 +1,7 @@
+{
+  "id": 4,
+  "name": "Basic Mode",
+  "description": "Минимальный режим только с Telegram коммуникацией",
+  "aspects": ["telegram_aspect", "task_aspect", "utils_aspect"],
+  "default_program": "basic"
+}

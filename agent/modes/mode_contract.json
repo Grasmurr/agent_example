@@ -1,0 +1,7 @@
+{
+  "id": 5,
+  "name": "Contract Mode",
+  "description": "Режим для работы с договорами и сотрудниками",
+  "aspects": ["staff_aspect", "telegram_aspect", "task_aspect", "utils_aspect", "timer_aspect", "pandas_aspect"],
+  "default_program": "contract"
+}

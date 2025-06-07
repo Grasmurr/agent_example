@@ -1,0 +1,32 @@
+{
+  "name": "Pandas Data Analysis Aspect",
+  "description": "Инструменты и мониторы для анализа данных с помощью pandas",
+  "tools": [
+    "query_to_df", 
+    "execute_pandas", 
+    "get_df_info", 
+    "update_sheet_from_df", 
+    "read_sheet", 
+    "merge_dataframes", 
+    "clear_all_dataframes"
+  ],
+  "monitors": [
+    {
+      "name": "dataframe_monitor",
+      "path": "components.monitoring.dataframe_monitor",
+      "class": "DataFrameMonitor",
+      "dependencies": ["mysql_pandas_tool"]
+    },
+    {
+      "name": "google_sheets_monitor",
+      "path": "components.monitoring.google_sheets_monitor",
+      "class": "GoogleSheetsMonitor",
+      "dependencies": ["google_sheets_tool"]
+    }
+  ],
+  "programs": [
+    "tools/sql_pandas", 
+    "tools/database", 
+    "tools/googlesheet"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "name": "Development Mode",
+  "description": "Полный доступ к VM и инструментам разработки",
+  "aspects": ["vm_aspect", "python_cli_aspect", "pandas_aspect", "telegram_aspect", "task_aspect", "sketch_aspect", "utils_aspect"],
+  "default_program": "basic"
+}

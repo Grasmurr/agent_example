@@ -1,0 +1,19 @@
+{
+  "name": "Task Management Aspect",
+  "description": "Инструменты для управления задачами",
+  "tools": [
+    "create_task", 
+    "finish_task", 
+    "cancel_task", 
+    "show_pending_tasks"
+  ],
+  "monitors": [
+    {
+      "name": "task_monitor",
+      "path": "components.monitoring.task_monitor",
+      "class": "TaskMonitor",
+      "dependencies": ["task_tool"]
+    }
+  ],
+  "programs": ["tools/tasks"]
+}

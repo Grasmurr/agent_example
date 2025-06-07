@@ -1,0 +1,37 @@
+{
+  "name": "Staff Management Aspect",
+  "description": "Инструменты и мониторы для управления сотрудниками и их задачами",
+  "tools": [
+    "open_telegram_chat",
+    "send_telegram_message_to", 
+    "send_telegram_message", 
+    "sync_sheet_tasks_with_redis",
+    "task_in_progress", 
+    "task_finished",
+    "setup_task_reporting_timer",
+    "setup_task_planning_timer",
+    "setup_all_staff_timers",
+    "get_staff_tasks_summary"
+  ],
+  "monitors": [
+    {
+      "name": "staff_monitor",
+      "path": "components.monitoring.staff_monitor",
+      "class": "StaffMonitor",
+      "dependencies": ["staff_tool"]
+    },
+    {
+      "name": "messages_monitor",
+      "path": "components.monitoring.messages_monitor",
+      "class": "MessagesMonitor",
+      "dependencies": ["staff_tool"]
+    },
+    {
+      "name": "telegram_chat_monitor",
+      "path": "components.monitoring.tchat_monitor",
+      "class": "TelegramChatMonitor",
+      "dependencies": ["agent"]
+    }
+  ],
+  "programs": ["tools/staff", "tools/telegram"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Timer Management Aspect",
+  "description": "Инструменты и мониторы для создания и управления таймерами",
+  "tools": [
+    "create_timer", 
+    "list_timers", 
+    "cancel_timer", 
+    "get_timer_details", 
+    "edit_timer",
+    "wake_up_agent"
+  ],
+  "monitors": [
+    {
+      "name": "timer_monitor",
+      "path": "components.monitoring.timer_monitor",
+      "class": "TimerMonitor",
+      "dependencies": ["timer_tool"]
+    }
+  ],
+  "programs": ["tools/timers"]
+}

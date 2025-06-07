@@ -1,0 +1,61 @@
+from langchain.tools.base import StructuredTool
+
+from .note_tool import NoteTool
+from .ssh_tool import SSHTool
+from .tg_tool import TGTool
+from multiprocessing.managers import ListProxy
+from .task_tool import TaskTool
+from .python_tool import PythonTool
+from .audio_tool import AudioTool
+<<<<<<< HEAD
+from .video_message_tool import VideoMessageTool
+=======
+from .mysql_tool import MySQLTool
+from .google_sheets_tool import GoogleSheetsTool
+>>>>>>> feature/revaluation
+
+class Toolset:
+    def __init__(self, memory_manager, tg_messages: ListProxy):
+        self.ltm_tool = NoteTool(memory_manager)
+        self.ssh_tool = SSHTool()
+        self.tg_tool = TGTool(tg_messages)
+        self.task_tool = TaskTool()
+        self.python_tool = PythonTool()
+        self.audio_tool = AudioTool(self.tg_tool)
+<<<<<<< HEAD
+        self.video_msg_tool = VideoMessageTool(self.tg_tool)
+=======
+        self.database_tool = MySQLTool()
+        self.google_sheets_tool = GoogleSheetsTool()
+>>>>>>> feature/revaluation
+
+    def tools(self):
+        return [self.tool_from(func) for func in [
+                # self.ltm_tool.take_note,
+                # self.ltm_tool.discard_note,
+                # self.ssh_tool.terminal,
+                self.tg_tool.send_telegram_message,
+                self.task_tool.create_task,
+                self.task_tool.finish_task,
+                self.task_tool.cancel_task,
+<<<<<<< HEAD
+                self.audio_tool.send_telegram_voice_message,
+                self.video_msg_tool.send_telegram_video_message,
+=======
+                # self.audio_tool.send_telegram_voice_message,
+                self.database_tool.execute_db_query,
+                # self.database_tool.get_show_price_dynamics,
+                self.google_sheets_tool.update_google_sheet,
+>>>>>>> feature/revaluation
+                #self.python_tool.eval_python,
+                #self.python_tool.exec_python,
+            ]
+        ]
+
+    def tool_from(self, function):
+        return StructuredTool.from_function(function)
+
+if __name__ == '__main__':
+    print(memorize.name)
+    print(memorize.description)
+    print(memorize.args)

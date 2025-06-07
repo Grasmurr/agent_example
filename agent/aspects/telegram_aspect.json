@@ -1,0 +1,16 @@
+{
+  "name": "Telegram Communication Aspect",
+  "description": "Инструменты для коммуникации через Telegram",
+  "tools": [
+    "send_telegram_message"
+  ],
+  "monitors": [
+    {
+      "name": "telegram_chat_monitor",
+      "path": "components.monitoring.tchat_monitor",
+      "class": "TelegramChatMonitor",
+      "dependencies": ["agent"]
+    }
+  ],
+  "programs": ["tools/telegram"]
+}

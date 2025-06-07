@@ -1,0 +1,11 @@
+{
+  "name": "Utils Aspect",
+  "description": "Остальные важные инструменты",
+  "tools": ["list_s3_objects", "get_s3_object", "put_s3_object", "check_s3_connection", "patch_aspect_hub_for_timeweb", "reload_component", "delete_s3_object"],
+  "monitors": [],
+  "programs": [
+    "tools/general", 
+    "modifiers/no-loops", 
+    "modifiers/language/only-russian"
+  ]
+}
